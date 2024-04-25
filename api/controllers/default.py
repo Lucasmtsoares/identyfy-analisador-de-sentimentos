@@ -1,6 +1,6 @@
-from app import app
+from api import app
 from flask import render_template, request
-from app.models.analitic_sentiment import Sentiment
+from api.models.analitic_sentiment import Sentiment
 
 @app.route("/")
 #essas duas rotas levam a mesma pagina (abaixo). Isso é muito útil

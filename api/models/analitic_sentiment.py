@@ -3,9 +3,9 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 nltk.download('vader_lexicon')
 from translate import Translator
 import random
-from app.models.jsons.sentiment_positive import getResponse_positive
-from app.models.jsons.sentiment_negative import getResponse_negative
-from app.models.jsons.sentiment_neutre import getResponse_neutre
+from api.models.jsons.sentiment_positive import getResponse_positive
+from api.models.jsons.sentiment_negative import getResponse_negative
+from api.models.jsons.sentiment_neutre import getResponse_neutre
 
 class Sentiment:
     def __init__(self, sentiment):
