@@ -3,9 +3,9 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 nltk.download('vader_lexicon')
 from translate import Translator
 import random
-from models.jsons.sentiment_positive import getResponse_positive
-from models.jsons.sentiment_negative import getResponse_negative
-from models.jsons.sentiment_neutre import getResponse_neutre
+from app.models.jsons.sentiment_positive import getResponse_positive
+from app.models.jsons.sentiment_negative import getResponse_negative
+from app.models.jsons.sentiment_neutre import getResponse_neutre
 
 class Sentiment:
     def __init__(self, sentiment):
@@ -26,8 +26,6 @@ class Sentiment:
     
     def execute(self):
         instance_sentiment = self.instance()
-
-        print(f'Nova Instance >>> {instance_sentiment}')
 
         if instance_sentiment['pos'] > instance_sentiment['neg'] and instance_sentiment['pos'] > instance_sentiment['neu']:
             # sentimento positivo

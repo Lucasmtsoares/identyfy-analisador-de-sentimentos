@@ -1,12 +1,6 @@
-from flask import Flask
-
-import os
-
+from app import app
 from flask import render_template, request
-from models.analitic_sentiment import Sentiment
-
-app = Flask(__name__)
-
+from app.models.analitic_sentiment import Sentiment
 
 @app.route("/")
 #essas duas rotas levam a mesma pagina (abaixo). Isso é muito útil
@@ -35,12 +29,5 @@ def explane_nltk():
 
 @app.route("/quem-sou-eu")
 def my_description():
-    
     return render_template("mydescription.html")
 
-
-
-if __name__=="__main__":
-    #port = int(os.getenv('PORT'), '5000')
-    app.run(debug=True)
-  
