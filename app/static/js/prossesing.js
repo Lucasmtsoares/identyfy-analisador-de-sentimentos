@@ -1,5 +1,5 @@
 async function frase(){
-    const text = await document.querySelector("#response").innerText;
+    const text = await document.querySelector("#response").innerHTML;
     return text
 }
 

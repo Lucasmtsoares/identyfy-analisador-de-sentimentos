@@ -47,12 +47,12 @@ body{
 
 #content{
     width: 700px;
-    height: 100vh;
+    height: 90vh;
     display: grid;
     margin: auto;
 }
 .container{
-    margin-top: 130px;
+    margin-top: 200px;
 }
 .container-question, .container-response{
     color: rgb(255, 255, 255);
@@ -117,10 +117,10 @@ form{
 }
 #form{
     position: absolute;
-    bottom: 34px;
+    bottom: 60px;
 }
 form #date{
-    width: 600px;
+    
     outline: unset;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.268);
@@ -144,20 +144,41 @@ form #date{
 }
 #msg{
     position: absolute;
-    bottom: 0;
+    bottom: 12px;
     color: aliceblue;
     font-size: 12px;
 }
-#response{
+#response, #response-api{
     display: none;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 450px){
+    body{
+        margin: 0;
+        padding: 0;
+    }
     #content{
         width: 350px;
     }
+    
+    .container-result{
+        font-size: 10px;
+    }
+    #msg{
+        text-align: center;
+        width: 360px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-widtth: 768px) and (max-width: 1024px){
+    /*Title*/
+    #content{
+        width: 360px;
+    }
     form #date{
-        width: 260px;
+        width: 160px;
+        background-color: chocolate;
     }
     .container-result{
         font-size: 10px;
@@ -166,3 +187,17 @@ form #date{
         font-size: 10px;
     }
 }
+
+@media screen and (max-width: 1024px){
+    /*Title*/
+    .title{
+        font-size: 5em;
+    }
+    .icon{
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        float: inline-end;
+    }
+}
+
